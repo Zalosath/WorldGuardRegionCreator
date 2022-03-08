@@ -1,3 +1,5 @@
+import os
+
 class RegionCreator:
     def __init__(self):
         self.regionText = 'regions:' # initialise the regionText to nothing, we will add to it later
@@ -80,7 +82,7 @@ class RegionCreator:
             for z in range(self.startZ, self.endZ, self.individualRegionSizeZ + 1):
                 regionNum += 1
                 self.generate_region(regionNum, x, z)
-        with open('regions.yml', 'w') as f:
+        with open(os.path.dirname(os.path.abspath(__file__)) + '/regions.yml', 'w') as f:
             f.write(self.regionText)
         exit()
 

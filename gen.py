@@ -1,6 +1,3 @@
-from lib2to3.pgen2.pgen import generate_grammar
-
-
 class RegionCreator:
     def __init__(self):
         self.regionText = 'regions:' # initialise the regionText to nothing, we will add to it later
